@@ -78,11 +78,34 @@ npm run dev
 
 ## Environment Variables
 
+### Server (Render)
 ```
 PORT=5000
-MONGODB_URI=mongodb://localhost:27017/url-shortener
-BASE_URL=http://localhost:5000
+MONGODB_URI=mongodb+srv://...
+BASE_URL=https://your-api.onrender.com
+CORS_ORIGIN=https://your-app.vercel.app
 ```
+
+### Client (Vercel)
+```
+VITE_API_URL=https://your-api.onrender.com/api
+```
+
+## Deployment
+
+### Server on Render
+1. Create a new Web Service
+2. Connect your GitHub repo
+3. Set root directory to `server`
+4. Build command: `npm install`
+5. Start command: `npm start`
+6. Add environment variables
+
+### Client on Vercel
+1. Import your GitHub repo
+2. Set root directory to `client`
+3. Framework preset: Vite
+4. Add `VITE_API_URL` environment variable
 
 ## License
 
